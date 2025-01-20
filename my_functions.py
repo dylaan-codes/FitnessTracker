@@ -75,7 +75,7 @@ def max_reps(*args):
     file_name = './FitnessTracker/data/max_rep.csv'
     for index, value in enumerate(args):
         value = int(value)
-        if index < 5:
+        if index <= 5:
             reps = int(value)
             df_new = max_reps_insert(date, week, exercise_names[index], reps)
             insert_file_exists(file_name, df_new)
