@@ -3,6 +3,23 @@
 Welcome to my **90-Day Fitness Tracker Project**! This project is designed to track and analyze personal fitness data over three months, providing actionable insights and visualizations to understand and improve your fitness journey.
 
 ---
+## Bodyweight GUI
+<img src="gui_images/bw_gui.png" width="400">
+
+## Max Reps GUI
+<img src="gui_images/max_reps.png" width="400">
+<img src="gui_images/max_reps_1.png" width="400">
+<img src="gui_images/max_reps_2.png" width="400">
+
+## Muscle Growth GUI
+<img src="gui_images/muscle_growth_gui.png" width="400">
+<img src="gui_images/muscle_growth_gui_1.png" width="400">
+<img src="gui_images/muscle_growth_gui_2.png" width="400">
+
+
+
+
+---
 
 ## 🚀 Features
 
