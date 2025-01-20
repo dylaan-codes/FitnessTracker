@@ -4,17 +4,17 @@ Welcome to my **90-Day Fitness Tracker Project**! This project is designed to tr
 
 ---
 ## Bodyweight GUI
-![Bodyweight GUI](/gui_images/bw_gui.png)
+<img src="gui_images/bw_gui.png" width="400">
 
 ## Max Reps GUI
-![Max Reps](/gui_images/max_reps.png)
-![Max Reps 1](/gui_images/max_reps_1.png)
-![Max Reps 2](/gui_images/max_reps_2.png)
+<img src="gui_images/max_reps.png" width="400">
+<img src="gui_images/max_reps_1.png" width="400">
+<img src="gui_images/max_reps_2.png" width="400">
 
 ## Muscle Growth GUI
-![Muscle Growth GUI](/gui_images/muscle_growth_gui.png)
-![Muscle Growth GUI 1](/gui_images/muscle_growth_gui_1.png)
-![Muscle Growth GUI 2](/gui_images/muscle_growth_gui_2.png)
+<img src="gui_images/muscle_growth_gui.png" width="400">
+<img src="gui_images/muscle_growth_gui_1.png" width="400">
+<img src="gui_images/muscle_growth_gui_2.png" width="400">
 
 
 
