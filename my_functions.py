@@ -3,7 +3,7 @@ import pandas as pd
 import os
 from tkinter import messagebox
 
-START_DATE = "2024-11-28" # MAKE sure to change this when starting challenge
+START_DATE = "2025-01-21" # MAKE sure to change this when starting challenge
 
 def start():
     choice = int(input("Service:\n"
@@ -61,13 +61,11 @@ def exercise():
 
 def max_reps(*args):
     exercise_names = {
-        0: "ceiling touches",
+        0: "pullups",
         1: "pushups",
-        2: "pullups",
-        3: "dips",
-        4: "chinups",
-        5: "squats",
-        7: "plank hold"
+        2: "dips",
+        3: "squats",
+        4: "plank hold",
     }
     date = todays_date()
     week = weeks_since(START_DATE)
@@ -75,15 +73,15 @@ def max_reps(*args):
     file_name = './FitnessTracker/data/max_rep.csv'
     for index, value in enumerate(args):
         value = int(value)
-        if index <= 5:
+        if index <= 3:
             reps = int(value)
             df_new = max_reps_insert(date, week, exercise_names[index], reps)
             insert_file_exists(file_name, df_new)
-        elif index == 6:
+        elif index == 4:
             hold += value*60
         else:
             hold += value
-    df_new = max_reps_insert(date, week, exercise_names[7], hold)
+    df_new = max_reps_insert(date, week, exercise_names[4], hold)
     insert_file_exists(file_name, df_new)
     print("max reps, APPEND SUCCESFUL!")
 
@@ -99,17 +97,17 @@ def max_reps_insert(date, week, exercise, reps):
 
 def measure(*args):
     muscle_parts = {
-        0: "left_shoulders",
-        1: "right_shoulders",
+        0: "left_bicep",
+        1: "right_bicep",
         2: "chest",
-        3: "left_arms",
-        4: "right_arms",
-        5: "waist",
+        3: "left_forearm",
+        4: "right_forearm",
+        5: "shoulder",
         6: "left_quad",
         7: "right_quad",
         8: "belly",
-        9: "left_calves",
-        10: "right_calves"
+        9: "left_calf",
+        10: "right_calf"
     }
     date = todays_date()
     week = weeks_since(START_DATE)
@@ -118,7 +116,7 @@ def measure(*args):
         value = float(value)    # in cm
         df_new = measurement_insert(date, week, muscle_parts[index], value)
         insert_file_exists(file_name, df_new)
-    print("max reps, APPEND SUCCESFUL!")
+    print("measurements, APPEND SUCCESFUL!")
 
 
 def measurement_insert(date, week, muscle, muscle_cm):
@@ -129,6 +127,7 @@ def measurement_insert(date, week, muscle, muscle_cm):
             'circumference': [muscle_cm]
     })
     return df_new
+
 
 def insert_file_exists(path, dataframe_new):
     file_name = path

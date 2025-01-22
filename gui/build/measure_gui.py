@@ -3,8 +3,6 @@
 # GUI design and code by Dylan Nguyen
 from FitnessTracker.my_functions import *
 from FitnessTracker.my_validations import *
-
-
 from pathlib import Path
 
 # from tkinter import *
@@ -23,8 +21,10 @@ def relative_to_assets(path: str) -> Path:
 measure_window = Tk()
 
 measure_window.geometry("800x600")
-measure_window.configure(bg ="#FFFFFF")
+measure_window.title("max_rep form")
+measure_window.configure(bg="#FFFFFF")
 vcmd = get_vcmd(measure_window)
+
 
 canvas = Canvas(
     measure_window,
@@ -67,7 +67,7 @@ canvas.create_text(
     624.0,
     107.0,
     anchor="nw",
-    text="Date",
+    text="Date ",
     fill="#FFFFFF",
     font=("Inter Medium", 20 * -1)
 )
@@ -82,12 +82,11 @@ canvas.create_text(
 )
 
 
-
 canvas.create_text(
     432.0,
     176.0,
     anchor="nw",
-    text="Shoulders",
+    text="Bicep",
     fill="#FFFFFF",
     font=("Inter Medium", 20 * -1)
 )
@@ -96,28 +95,116 @@ canvas.create_text(
     432.0,
     323.0,
     anchor="nw",
-    text="Leg Meat",
+    text="Quads",
     fill="#FFFFFF",
     font=("Inter Medium", 20 * -1)
 )
+day_entry = Entry(
+    bd=0,
+    bg="#D9D9D9",
+    fg="#000716",
+    highlightthickness=0
+)
 
+date_entry = Entry(
+    bd=0,
+    bg="#D9D9D9",
+    fg="#000716",
+    highlightthickness=0
+)
+
+bicep_left_entry = Entry(
+    bd=0,
+    bg="#D9D9D9",
+    fg="#000716",
+    highlightthickness=0
+)
+
+bicep_right_entry = Entry(
+    bd=0,
+    bg="#D9D9D9",
+    fg="#000716",
+    highlightthickness=0
+)
+
+chest_entry = Entry(
+    bd=0,
+    bg="#D9D9D9",
+    fg="#000716",
+    highlightthickness=0
+)
+
+forearm_left_entry = Entry(
+    bd=0,
+    bg="#D9D9D9",
+    fg="#000716",
+    highlightthickness=0
+)
+
+forearm_right_entry = Entry(
+    bd=0,
+    bg="#D9D9D9",
+    fg="#000716",
+    highlightthickness=0
+)
+
+shoulder_entry = Entry(
+    bd=0,
+    bg="#D9D9D9",
+    fg="#000716",
+    highlightthickness=0
+)
+
+quad_left_entry = Entry(
+    bd=0,
+    bg="#D9D9D9",
+    fg="#000716",
+    highlightthickness=0
+)
+
+quad_right_entry = Entry(
+    bd=0,
+    bg="#D9D9D9",
+    fg="#000716",
+    highlightthickness=0
+)
+
+belly_entry = Entry(
+    bd=0,
+    bg="#D9D9D9",
+    fg="#000716",
+    highlightthickness=0
+)
+
+calf_left_entry = Entry(
+    bd=0,
+    bg="#D9D9D9",
+    fg="#000716",
+    highlightthickness=0
+)
+
+
+calf_right_entry = Entry(
+    bd=0,
+    bg="#D9D9D9",
+    fg="#000716",
+    highlightthickness=0
+)
 entry_image_1 = PhotoImage(
     file=relative_to_assets("entry_1.png"))
 entry_bg_1 = canvas.create_image(
-    552.5,
+    581.5,
     436.0,
     image=entry_image_1
 )
 
-
 entry_image_2 = PhotoImage(
     file=relative_to_assets("entry_2.png"))
 entry_bg_2 = canvas.create_image(
-    467.5,
+    476.5,
     436.0,
     image=entry_image_2
 )
-
 
 entry_image_3 = PhotoImage(
     file=relative_to_assets("entry_3.png"))
@@ -126,7 +213,6 @@ entry_bg_3 = canvas.create_image(
     366.0,
     image=entry_image_3
 )
-
 
 entry_image_4 = PhotoImage(
     file=relative_to_assets("entry_4.png"))
@@ -152,17 +238,15 @@ entry_image_6 = PhotoImage(
     file=relative_to_assets("entry_6.png"))
 entry_bg_6 = canvas.create_image(
     706.5,
-    289.0,
+    219.0,
     image=entry_image_6
 )
-
-
 
 entry_image_7 = PhotoImage(
     file=relative_to_assets("entry_7.png"))
 entry_bg_7 = canvas.create_image(
-    552.5,
-    289.0,
+    581.5,
+    219.0,
     image=entry_image_7
 )
 
@@ -170,55 +254,49 @@ entry_bg_7 = canvas.create_image(
 entry_image_8 = PhotoImage(
     file=relative_to_assets("entry_8.png"))
 entry_bg_8 = canvas.create_image(
-    467.5,
-    289.0,
+    476.5,
+    219.0,
     image=entry_image_8
 )
+
 
 
 entry_image_9 = PhotoImage(
     file=relative_to_assets("entry_9.png"))
 entry_bg_9 = canvas.create_image(
-    706.5,
-    219.0,
+    581.5,
+    289.0,
     image=entry_image_9
 )
+
 
 
 entry_image_10 = PhotoImage(
     file=relative_to_assets("entry_10.png"))
 entry_bg_10 = canvas.create_image(
-    581.5,
-    219.0,
+    476.5,
+    289.0,
     image=entry_image_10
 )
+
 
 
 entry_image_11 = PhotoImage(
     file=relative_to_assets("entry_11.png"))
 entry_bg_11 = canvas.create_image(
-    476.5,
-    219.0,
+    682.0,
+    152.0,
     image=entry_image_11
 )
+
 
 
 entry_image_12 = PhotoImage(
     file=relative_to_assets("entry_12.png"))
 entry_bg_12 = canvas.create_image(
-    682.0,
-    152.0,
-    image=entry_image_12
-)
-
-
-
-entry_image_13 = PhotoImage(
-    file=relative_to_assets("entry_13.png"))
-entry_bg_13 = canvas.create_image(
     491.5,
     152.0,
-    image=entry_image_13
+    image=entry_image_12
 )
 
 
@@ -227,7 +305,26 @@ canvas.create_text(
     432.0,
     246.0,
     anchor="nw",
-    text="Arms",
+    text="Forearm",
+    fill="#FFFFFF",
+    font=("Inter Medium", 20 * -1)
+)
+
+entry_image_13 = PhotoImage(
+    file=relative_to_assets("entry_13.png"))
+entry_bg_13 = canvas.create_image(
+    707.0,
+    289.0,
+    image=entry_image_13
+)
+
+
+
+canvas.create_text(
+    655.0,
+    246.0,
+    anchor="nw",
+    text="Shoulder",
     fill="#FFFFFF",
     font=("Inter Medium", 20 * -1)
 )
@@ -252,15 +349,6 @@ canvas.create_text(
 
 canvas.create_text(
     655.0,
-    246.0,
-    anchor="nw",
-    text="Waist",
-    fill="#FFFFFF",
-    font=("Inter Medium", 20 * -1)
-)
-
-canvas.create_text(
-    655.0,
     323.0,
     anchor="nw",
     text="Belly",
@@ -276,114 +364,6 @@ image_1 = canvas.create_image(
     image=image_image_1
 )
 
-day_entry = Entry(
-    bd=0,
-    bg="#D9D9D9",
-    fg="#000716",
-    highlightthickness=0
-)
-date_entry = Entry(
-    bd=0,
-    bg="#D9D9D9",
-    fg="#000716",
-    highlightthickness=0
-)
-shoulders_left_entry = Entry(
-    bd=0,
-    bg="#D9D9D9",
-    fg="#000716",
-    highlightthickness=0
-)
-shoulders_right_entry = Entry(
-    bd=0,
-    bg="#D9D9D9",
-    fg="#000716",
-    highlightthickness=0
-)
-chest_entry = Entry(
-    bd=0,
-    bg="#D9D9D9",
-    fg="#000716",
-    highlightthickness=0
-)
-arms_left_entry = Entry(
-    bd=0,
-    bg="#D9D9D9",
-    fg="#000716",
-    highlightthickness=0
-)
-arms_right_entry = Entry(
-    bd=0,
-    bg="#D9D9D9",
-    fg="#000716",
-    highlightthickness=0
-)
-waist_entry = Entry(
-    bd=0,
-    bg="#D9D9D9",
-    fg="#000716",
-    highlightthickness=0
-)
-quad_left_entry = Entry(
-    bd=0,
-    bg="#D9D9D9",
-    fg="#000716",
-    highlightthickness=0
-)
-quad_right_entry = Entry(
-    bd=0,
-    bg="#D9D9D9",
-    fg="#000716",
-    highlightthickness=0
-)
-belly_entry = Entry(
-    bd=0,
-    bg="#D9D9D9",
-    fg="#000716",
-    highlightthickness=0
-)
-calves_left_entry = Entry(
-    bd=0,
-    bg="#D9D9D9",
-    fg="#000716",
-    highlightthickness=0
-)
-calves_right_entry = Entry(
-    bd=0,
-    bg="#D9D9D9",
-    fg="#000716",
-    highlightthickness=0
-)
-
-def get_data():
-    if validate_empty(shoulders_left_entry.get(), shoulders_right_entry.get(), chest_entry.get(), arms_left_entry.get(),
-                      arms_right_entry.get(), waist_entry.get(), quad_left_entry.get(), quad_right_entry.get(), belly_entry.get(),
-                      calves_left_entry.get(), calves_right_entry.get()) == 1:
-        messagebox.showerror("Error", "No Null Values,\nplease and thank you!")
-    else:
-        response = messagebox.askyesno("Confirm",
-                                       f'Shoulders: {shoulders_left_entry.get()}, {shoulders_right_entry.get()} | Chest: {chest_entry.get()}'
-                                       f'\nArms: {arms_left_entry.get()}, {arms_right_entry.get()} | Waist: {waist_entry.get()} '
-                                       f'\nLegs: {quad_left_entry.get()}, {quad_right_entry.get()} | Belly: {belly_entry.get()}'
-                                       f'\nCalves: {calves_left_entry.get()}, {calves_right_entry.get()}'     
-                                       f'\nCorrect?')
-
-        if response:  # If user clicks "Yes"
-            print(f'{date_entry.get()} | {day_entry.get()}  \nshoulder_l: {shoulders_left_entry.get()} | shoulder_r: {shoulders_right_entry.get()} | chest: {chest_entry.get()}'
-                  f'\narms_l: {arms_left_entry.get()} | arms_r: {arms_right_entry.get()} | waist: {waist_entry.get()} '
-                  f'\nleg_l: {quad_left_entry.get()} | leg_r: {quad_right_entry.get()} | belly: {belly_entry.get()}'
-                  f'\ncalves_l: {calves_left_entry.get()} | calves_r: {calves_right_entry.get()}')
-            measure(shoulders_left_entry.get(), shoulders_right_entry.get(), chest_entry.get(), arms_left_entry.get(),
-                    arms_right_entry.get(), waist_entry.get(), quad_left_entry.get(), quad_right_entry.get(), belly_entry.get(),
-                    calves_left_entry.get(), calves_right_entry.get())
-            messagebox.showinfo("Success", "Bidding accomplished!")
-            measure_window.destroy()
-
-        else:  # If user clicks "No"
-            print(f'aborted')
-            messagebox.showinfo("Cancelled", "Action cancelled!")
-
-
 button_image_1 = PhotoImage(
     file=relative_to_assets("button_1.png"))
 measure_submit_button = Button(
@@ -393,35 +373,64 @@ measure_submit_button = Button(
     command=lambda: [print("measure submit clicked"), get_data()],
     relief="flat"
 )
-measure_submit_button.place(x=474.0, y=470.0, width=240.0, height=80.0)
+
+def get_data():
+    if validate_empty(bicep_left_entry.get(), bicep_right_entry.get(), chest_entry.get(), forearm_left_entry.get(),
+                      forearm_right_entry.get(), quad_left_entry.get(), quad_right_entry.get(), belly_entry.get(),
+                      calf_left_entry.get(), calf_right_entry.get()) == 1:
+        messagebox.showerror("Error", "No Null Values,\nplease and thank you!")
+    else:
+        response = messagebox.askyesno("Confirm",
+                                       f'Bicep: {bicep_left_entry.get()}, {bicep_right_entry.get()} | Chest: {chest_entry.get()}'
+                                       f'\nForearm: {forearm_left_entry.get()}, {forearm_right_entry.get()} | Shoulder: {shoulder_entry.get()} '
+                                       f'\nLegs: {quad_left_entry.get()}, {quad_right_entry.get()} | Belly: {belly_entry.get()} '
+                                       f'\nCalves: {calf_left_entry.get()}, {calf_right_entry.get()}'     
+                                       f'\nCorrect?')
+
+        if response:  # If user clicks "Yes"
+            print(f'{date_entry.get()} | {day_entry.get()}  \nbicep_l: {bicep_left_entry.get()} | bicep_r: {bicep_right_entry.get()} | chest: {chest_entry.get()}'
+                  f'\nforearm_l: {forearm_left_entry.get()} | forearm_r: {forearm_right_entry.get()} | shoulder: {shoulder_entry.get()} '
+                  f'\nleg_l: {quad_left_entry.get()} | leg_r: {quad_right_entry.get()} | belly: {belly_entry.get()}'
+                  f'\ncalves_l: {calf_left_entry.get()} | calves_r: {calf_right_entry.get()}')
+            measure(bicep_left_entry.get(), bicep_right_entry.get(), chest_entry.get(), forearm_left_entry.get(),
+                    forearm_right_entry.get(), shoulder_entry.get(), quad_left_entry.get(), quad_right_entry.get(), belly_entry.get(),
+                    calf_left_entry.get(), calf_right_entry.get())
+            messagebox.showinfo("Success", "Bidding accomplished!")
+            measure_window.destroy()
+
+        else:  # If user clicks "No"
+            print(f'aborted')
+            messagebox.showinfo("Cancelled", "Action cancelled!")
+
 
 # Validation
-shoulders_left_entry.config(validate="key", validatecommand=vcmd["int"])
-shoulders_right_entry.config(validate="key", validatecommand=vcmd["int"])
-chest_entry.config(validate="key", validatecommand=vcmd["int"])
-arms_left_entry.config(validate="key", validatecommand=vcmd["int"])
-arms_right_entry.config(validate="key", validatecommand=vcmd["int"])
-waist_entry.config(validate="key", validatecommand=vcmd["int"])
-quad_left_entry.config(validate="key", validatecommand=vcmd["int"])
-quad_right_entry.config(validate="key", validatecommand=vcmd["int"])
-belly_entry.config(validate="key", validatecommand=vcmd["int"])
-calves_left_entry.config(validate="key", validatecommand=vcmd["int"])
-calves_right_entry.config(validate="key", validatecommand=vcmd["int"])
+bicep_left_entry.config(validate="key", validatecommand=vcmd["float"])
+bicep_right_entry.config(validate="key", validatecommand=vcmd["float"])
+chest_entry.config(validate="key", validatecommand=vcmd["float"])
+forearm_left_entry.config(validate="key", validatecommand=vcmd["float"])
+forearm_right_entry.config(validate="key", validatecommand=vcmd["float"])
+shoulder_entry.config(validate="key", validatecommand=vcmd["float"])
+quad_left_entry.config(validate="key", validatecommand=vcmd["float"])
+quad_right_entry.config(validate="key", validatecommand=vcmd["float"])
+belly_entry.config(validate="key", validatecommand=vcmd["float"])
+calf_left_entry.config(validate="key", validatecommand=vcmd["float"])
+calf_right_entry.config(validate="key", validatecommand=vcmd["float"])
 
 # Place all widgets at the bottom
 day_entry.place(x=432.0, y=138.0, width=119.0, height=26.0)
 date_entry.place(x=624.0, y=138.0, width=116.0, height=26.0)
-shoulders_left_entry.place(x=432.0, y=205.0, width=89.0, height=26.0)
-shoulders_right_entry.place(x=537.0, y=205.0, width=89.0, height=26.0)
+bicep_left_entry.place(x=432.0, y=205.0, width=89.0, height=26.0)
+bicep_right_entry.place(x=537.0, y=205.0, width=89.0, height=26.0)
 chest_entry.place(x=655.0, y=205.0, width=103.0, height=26.0)
-arms_left_entry.place(x=432.0, y=275.0, width=71.0, height=26.0)
-arms_right_entry.place(x=518.0, y=275.0, width=69.0, height=26.0)
-waist_entry.place(x=655.0, y=275.0, width=103.0, height=26.0)
+forearm_left_entry.place(x=432.0, y=275.0, width=89.0, height=26.0)
+forearm_right_entry.place(x=537.0, y=275.0, width=89.0, height=26.0)
+shoulder_entry.place(x=655.0, y=275.0, width=104.0, height=26.0)
 quad_left_entry.place(x=432.0, y=352.0, width=89.0, height=26.0)
 quad_right_entry.place(x=537.0, y=352.0, width=89.0, height=26.0)
 belly_entry.place(x=655.0, y=352.0, width=103.0, height=26.0)
-calves_left_entry.place(x=432.0, y=422.0, width=71.0, height=26.0)
-calves_right_entry.place(x=518.0, y=422.0, width=69.0, height=26.0)
+calf_left_entry.place(x=432.0, y=422.0, width=89.0, height=26.0)
+calf_right_entry.place(x=537.0, y=422.0, width=89.0, height=26.0)
+measure_submit_button.place(x=474.0, y=470.0, width=240.0, height=80.0)
 
 day_entry.delete(0, "end")
 day_entry.insert(0, count_day())

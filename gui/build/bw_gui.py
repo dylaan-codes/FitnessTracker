@@ -19,6 +19,7 @@ def relative_to_assets(path: str) -> Path:
 
 
 bw_window = Tk()
+bw_window.title("bodyweight form")
 bw_window.geometry("800x600")
 bw_window.configure(bg="#FFFFFF")
 vcmd = get_vcmd(bw_window)
